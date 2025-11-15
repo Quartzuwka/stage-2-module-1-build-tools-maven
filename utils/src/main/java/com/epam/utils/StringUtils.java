@@ -5,6 +5,11 @@ public class StringUtils {
     public StringUtils() {}
 
     public static boolean isPositiveNumber(String str) {
-        return Integer.parseInt(str) > 0;
+        try {
+
+            return Double.parseDouble(str) > 0;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
